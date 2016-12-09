@@ -32,7 +32,9 @@ class SalesforceServiceProvider extends ServiceProvider
     {
         $config = __DIR__ . '/config/config.php';
         $this->mergeConfigFrom($config, 'salesforce');
-        $this->publishes([$config => config_path('salesforce.php')]);
+        
+        // Modification for Lumen
+        $this->publishes([$config => '/config/salesforce.php']);
 
         $this->app->singleton('salesforce', function ($app) {
             $sf = new Salesforce(new Client());
