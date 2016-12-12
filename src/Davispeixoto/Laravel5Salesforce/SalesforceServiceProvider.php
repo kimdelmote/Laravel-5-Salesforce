@@ -36,7 +36,7 @@ class SalesforceServiceProvider extends ServiceProvider
         // Modification for Lumen
         $this->publishes([$config => '/config/salesforce.php']);
 
-        $this->app->singleton('salesforce', function ($app) {
+        $this->app->singleton(Salesforce::class, function ($app) {
             $sf = new Salesforce(new Client());
             $sf->connect($app['config']);
 
