@@ -54,7 +54,7 @@ class Salesforce
         $token = $configExternal->get('salesforce.token');
 
         try {
-            $this->sfh->createConnection($wsdl);
+            $this->sfh->createConnection($wsdl, null, $configExternal->get('salesforce.soap_options'));
             $this->sfh->login($user, $pass, $token);
         } catch (Exception $e) {
             throw new SalesforceException('Exception at Constructor' . $e->getMessage() . "\n\n" . $e->getTraceAsString());
