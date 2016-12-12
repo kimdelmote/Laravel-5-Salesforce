@@ -1,6 +1,7 @@
-# Laravel 5 Salesforce
+# Lumen 5 Salesforce
 
-This Laravel 5 package provides an interface for using [Salesforce CRM](http://www.salesforce.com/) through its **SOAP API**.
+This is a forked branch to allow it to work on Lumen and provide a SOAP Cache clearing option.
+This Lumen 5 package provides an interface for using [Salesforce CRM](http://www.salesforce.com/) through its **SOAP API**.
 
 _(Laravel 4 Salesforce Package can be found [here](https://github.com/davispeixoto/Laravel-4-Salesforce))_
 
